@@ -18,5 +18,6 @@ class Replacer
     std::string _content;
     inline std::size_t _findNext(std::size_t pos) const;
     inline bool  _isOpened(std::fstream &file) const;
+    bool  _checkArgs(void) const;
 };
 #endif

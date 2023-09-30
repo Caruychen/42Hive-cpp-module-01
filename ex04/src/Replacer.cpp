@@ -32,6 +32,8 @@ bool Replacer::write(void)
   std::size_t       found;
   std::size_t       pos;
 
+  if (!this->_checkArgs())
+    return (false);
   file.open(this->_filename + ".replace", std::fstream::out);
   if (!this->_isOpened(file))
     return (false);
@@ -61,6 +63,19 @@ inline bool  Replacer::_isOpened(std::fstream &file) const
     std::cout \
       << "Error: could not open file " \
       << this->_filename \
+      << std::endl;
+    return (false);
+  }
+  return (true);
+}
+
+bool  Replacer::_checkArgs(void) const
+{
+  if (this->_s1.empty())
+  {
+    std::cout \
+      << "Error: s1 cannot be empty. " \
+      << "Will result in an infinite loop." \
       << std::endl;
     return (false);
   }

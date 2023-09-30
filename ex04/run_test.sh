@@ -51,4 +51,7 @@ run_test tests/sample5.txt nonexistent_substring A
 echo "Testing sample6.txt:"
 run_test tests/sample6.txt " " ""
 
+echo "Testing infinite loop:"
+./replace tests/sample1.txt "" TEST
+
 make fclean
