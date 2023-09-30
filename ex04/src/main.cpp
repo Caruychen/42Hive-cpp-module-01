@@ -15,6 +15,7 @@ int main(int argc, char* argv[])
   Replacer r = Replacer(argv[1], argv[2], argv[3]);
   if (!r.read())
     return (1);
-  
+  if (!r.write())
+    return (1);
   return (0);
 }
