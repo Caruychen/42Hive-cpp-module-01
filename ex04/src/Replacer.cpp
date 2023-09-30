@@ -39,7 +39,7 @@ bool Replacer::write(void)
   found = this->_findNext(pos);
   while (found != std::string::npos)
   {
-    file << this->_content.substr(pos, found);
+    file << this->_content.substr(pos, found - pos);
     file << this->_s2;
     pos = found + this->_s1.length();
     found = this->_findNext(pos);
