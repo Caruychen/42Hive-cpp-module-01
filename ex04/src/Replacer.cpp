@@ -12,21 +12,6 @@ Replacer::Replacer(
 Replacer::~Replacer(void)
 {}
 
-std::string Replacer::getFilename(void) const
-{
-  return (this->_filename);
-}
-
-std::string Replacer::getS1(void) const
-{
-  return (this->_s1);
-}
-
-std::string Replacer::getS2(void) const
-{
-  return (this->_s2);
-}
-
 bool Replacer::read(void)
 {
   std::fstream      file;

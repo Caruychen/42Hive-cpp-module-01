@@ -8,9 +8,6 @@ class Replacer
   public:
     Replacer(std::string filename, std::string s1, std::string s2);
     ~Replacer(void);
-    std::string getFilename(void) const;
-    std::string getS1(void) const;
-    std::string getS2(void) const;
     bool  read(void);
     bool  write(void);
 
